@@ -7,15 +7,35 @@ const ContactSection = () => {
     const [form, setForm] = useState({ name: "", email: "", message: "" });
     const [sending, setSending] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setSending(true);
-        // Since no backend is connected, show a toast
-        setTimeout(() => {
-            toast.success("Message sent! Thank you for reaching out, " + form.name + ".");
-            setForm({ name: "", email: "", message: "" });
-            setSending(false);
-        }, 1000);
+
+        try {
+            const response = await fetch("https://formspree.io/f/xzdjllvz", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    name: form.name,
+                    email: form.email,
+                    message: form.message
+                })
+            });
+
+            if (response.ok) {
+                alert("Message sent successfully ✅");
+                setForm({ name: "", email: "", message: "" });
+            } else {
+                alert("Something went wrong ❌");
+            }
+        } catch (error) {
+            alert("Error sending message ❌");
+        }
+
+        setSending(false);
     };
 
     return (
