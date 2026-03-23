@@ -35,7 +35,7 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-lg shadow-card border-b border-border" : "bg-transparent"
+            className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-lg shadow-card border-b border-border" : "bg-transparent"
                 }`}
         >
             <div className="container mx-auto flex items-center justify-between py-4 px-4">
@@ -74,7 +74,7 @@ const Navbar = () => {
                     </button>
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="p-2 rounded-lg bg-secondary text-secondary-foreground"
+                        className="p-2 rounded-lg bg-secondary text-secondary-foreground relative z-50"
                     >
                         {isOpen ? <X size={20} /> : <Menu size={20} />}
                     </button>
@@ -84,17 +84,26 @@ const Navbar = () => {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+                        initial={{ opacity: 0, x: "100%" }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: "100%" }}
+                        className="fixed top-0 left-0 w-full h-screen bg-background z-40 flex flex-col items-center justify-center gap-6"
                     >
                         <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
                             {navLinks.map((link) => (
                                 <a
                                     key={link.href}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+
+                                        const section = document.querySelector(link.href);
+                                        if (section) {
+                                            section.scrollIntoView({ behavior: "smooth" });
+                                        }
+
+                                        setIsOpen(false);
+                                    }}
                                     className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-2"
                                 >
                                     {link.label}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 import { Mail, Phone, Linkedin, Github, Send } from "lucide-react";
+import { Toaster } from "sonner";
 import { toast } from "sonner";
 
 const ContactSection = () => {
@@ -10,6 +11,8 @@ const ContactSection = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setSending(true);
+
+        const toastId = toast.loading("Sending message... ⏳");
 
         try {
             const response = await fetch("https://formspree.io/f/xzdjllvz", {
@@ -26,16 +29,17 @@ const ContactSection = () => {
             });
 
             if (response.ok) {
-                alert("Message sent successfully ✅");
+                toast.success("Message sent successfully ✅", { id: toastId });
                 setForm({ name: "", email: "", message: "" });
             } else {
-                alert("Something went wrong ❌");
+                toast.error("Something went wrong ❌", { id: toastId });
             }
-        } catch (error) {
-            alert("Error sending message ❌");
-        }
 
-        setSending(false);
+        } catch (error) {
+            toast.error("Error sending message ❌", { id: toastId });
+        } finally {
+            setSending(false);
+        }
     };
 
     return (
@@ -79,6 +83,7 @@ const ContactSection = () => {
                                 </a>
                             ))}
                         </div>
+                        
                     </ScrollReveal>
 
                     {/* Contact Form */}

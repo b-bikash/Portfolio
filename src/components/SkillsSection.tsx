@@ -1,21 +1,31 @@
 import ScrollReveal from "./ScrollReveal";
-import { Code, Globe, Wrench } from "lucide-react";
+import { Code, Globe, Server, Database, Settings } from "lucide-react";
 
 const skillCategories = [
     {
-        title: "Programming",
+        title: "Languages",
         icon: Code,
-        skills: ["C#", "Python", "C", "C++"],
+        skills: ["C#", "Python", "C", "C++", "JavaScript", "TypeScript"],
     },
     {
-        title: "Web & Database",
+        title: "Frontend",
         icon: Globe,
-        skills: ["ASP.NET Core", "HTML", "CSS", "JavaScript", "SQL Server", "MySQL"],
+        skills: ["React", "Tailwind CSS", "HTML", "CSS"],
     },
     {
-        title: "Concepts & Tools",
-        icon: Wrench,
-        skills: ["DSA", "OOP", "DBMS", "OS", "Networking Basics", "Git", "GitHub", "VS Code"],
+        title: "Backend",
+        icon: Server,
+        skills: ["ASP.NET Core", "REST APIs"],
+    },
+    {
+        title: "Database",
+        icon: Database,
+        skills: ["SQL Server", "MySQL"],
+    },
+    {
+        title: "Tools",
+        icon: Settings,
+        skills: ["Git", "GitHub", "Vercel", "VS Code"],
     },
 ];
 
