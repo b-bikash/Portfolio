@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
-import { ExternalLink, Shield, X } from "lucide-react";
+import { ExternalLink, Shield, X, Github } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const ProjectsSection = () => {
@@ -133,7 +133,7 @@ const ProjectsSection = () => {
                                 soft delete patterns, and optimized database queries for performance and reliability.
                             </p>
 
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-2 mb-8">
                                 {["ASP.NET Core", "SQL Server", "JavaScript", "Clean Architecture", "Role-Based Access"].map((t) => (
                                     <span
                                         key={t}
@@ -142,6 +142,27 @@ const ProjectsSection = () => {
                                         {t}
                                     </span>
                                 ))}
+                            </div>
+
+                            <div className="flex flex-wrap gap-4 mt-8">
+                                <a 
+                                    href="https://onlineexamsystem-examverse-hrf3edcwa3hzhvb9.centralindia-01.azurewebsites.net/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground rounded-lg font-medium hover:opacity-90 transition-opacity"
+                                >
+                                    <ExternalLink size={18} />
+                                    Live Demo
+                                </a>
+                                <a 
+                                    href="#" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 px-6 py-2.5 border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-lg font-medium transition-colors"
+                                >
+                                    <Github size={18} />
+                                    GitHub Repo
+                                </a>
                             </div>
                         </motion.div>
                     </motion.div>

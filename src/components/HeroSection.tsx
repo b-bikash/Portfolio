@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.png";
+import profilePhoto from "@/assets/Bikash_Photo.png";
 
 const HeroSection = () => {
 
@@ -12,12 +12,7 @@ const HeroSection = () => {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center hero-gradient relative overflow-hidden pt-20">
-            {/* Decorative blobs */}
-            <div className="pointer-events-none absolute top-20 right-10 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
-
-            <div className="pointer-events-none absolute bottom-20 left-10 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-
+        <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
 
@@ -71,7 +66,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                     >
                         <div className="relative">
-                            <div className="w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-card-hover">
+                            <div className="w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-card-hover dark:shadow-[0_0_50px_rgba(20,184,166,0.3)] transition-shadow duration-500">
                                 <img
                                     src={profilePhoto}
                                     alt="Bikash Baruah - Software Developer"

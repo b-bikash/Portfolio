@@ -11,6 +11,14 @@ const education = [
 
 const certifications = [
     {
+        name: "Google AI Professional Certificate",
+        link: "/certificates/Coursera Google AI Professional Certificate.pdf"
+    },
+    {
+        name: "Google AI Essentials",
+        link: "/certificates/Coursera Google AI Essentials.pdf"
+    },
+    {
         name: "Python course – CEC Guwahati",
         link: "/certificates/Python Certificate.jpg"
     },
