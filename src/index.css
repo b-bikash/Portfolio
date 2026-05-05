@@ -105,6 +105,8 @@
         background-image: var(--gradient-card);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
+        transform: translateZ(0); /* Fixes browser text blurring bugs */
+        isolation: isolate;
     }
 
     .shadow-card {

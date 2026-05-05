@@ -29,7 +29,7 @@ const certifications = [
 ];
 
 const EducationSection = () => {
-    const [selectedCert, setSelectedCert] = useState(null);
+    const [selectedCert, setSelectedCert] = useState<string | null>(null);
     return (
         <section id="education" className="py-20 lg:py-28">
             <div className="container mx-auto px-4">
