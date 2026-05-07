@@ -3,7 +3,7 @@ import { GraduationCap, Award } from "lucide-react";
 import { useState } from "react";
 
 const education = [
-    { degree: "Master of Computer Application (MCA)", institution: "KIIT University", period: "2024 – 2026", grade: "Pursuing" },
+    { degree: "Master of Computer Application (MCA)", institution: "KIIT University", period: "2024 – 2026", grade: "CGPA: 8.05" },
     { degree: "Bachelor of Computer Application (BCA)", institution: "University of Science & Technology Meghalaya", period: "2018 – 2021", grade: "CGPA: 8.0" },
     { degree: "Class XII (CBSE)", institution: "Tinsukia English Academy", period: "2017", grade: "60%" },
     { degree: "Class X (CBSE)", institution: "OUR ABC Academy", period: "2015", grade: "CGPA: 8.0" },
