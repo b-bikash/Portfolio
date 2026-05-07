@@ -22,7 +22,7 @@ const AboutSection = () => {
                     <ScrollReveal delay={0.1}>
                         <div className="card-gradient rounded-xl p-6 shadow-card border border-border">
                             <p className="text-foreground leading-relaxed mb-6">
-                                I'm a motivated <strong>MCA student at KIIT University (2024–2026)</strong> with
+                                I'm a motivated <strong>MCA graduate from KIIT University (2024–2026)</strong> with
                                 a strong foundation in programming, databases, and problem-solving. I'm seeking
                                 an entry-level software engineering role to apply my technical skills and grow
                                 professionally.
