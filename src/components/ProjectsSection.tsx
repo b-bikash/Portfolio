@@ -81,14 +81,14 @@ const ProjectsSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-foreground/50 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[9999] bg-background/80 backdrop-blur-md flex items-start justify-center overflow-y-auto px-4 py-8"
             onClick={() => setOpen(false)}
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-card rounded-2xl shadow-card-hover border border-border max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8"
+              className="bg-card rounded-2xl shadow-card-hover border border-border max-w-2xl w-full max-h-[calc(100vh-4rem)] overflow-y-auto p-6 sm:p-8"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-6">
