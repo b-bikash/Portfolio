@@ -1,5 +1,9 @@
 # 💼 Bikash Baruah - Portfolio
 
+<p align="center">
+  <img src="./images/portfolio-home.png" alt="Portfolio Preview" width="100%">
+</p>
+
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)
 ![Vite](https://img.shields.io/badge/Vite-7-purple?logo=vite)
